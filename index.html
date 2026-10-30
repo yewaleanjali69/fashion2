@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+	<!-- font awesome links -->
+	<script src="https://kit.fontawesome.com/d5a4936763.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+
+	.blackdiv{
+		height: 40px;
+		width: 100%;
+		background-color: black;
+	}
+
+	.img1{
+		background-color: inherit;
+		height: 15px;
+		margin-top: 13px;
+		margin-left: 30px;
+		border: none;
+	
+	}
+
+	 .tag {
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+        }
+
+	.imglast{
+		background-color: inherit;
+		height: 15px;
+		margin-top: 13px;
+		margin-left: 920px;
+		border: none;
+	}
+
+	.box1{
+		background-color: white;
+		height: 150px;
+		width: 100%;
+	}
+
+	.c1{
+		margin-top: 50px;
+	}
+	.card1{
+		background-color: white;
+	}
+
+	 .like-btn {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+        }
+
+
+	.black{
+		height: 150px;
+		width: 100%;
+		background-color: black;
+	}
+
+	.color{
+		color: white;
+	}
+
+	   .hero-text {
+            position: absolute;
+            top: 90%;
+            left: 25px;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+        }
+
+        .hero-text h2 {
+            font-size: 55px;
+        }
+
+        .subscribe-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 12px 22px;
+            opacity: 0.8;
+        }
+
+        .reply-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            float: right;
+        }
+
+        .rightcard{
+        	background-color: black;
+        	height: 60px;
+        	width: 100%;
+        	color: white;
+        }
+
+
+        .popular-posts {
+            width: 100%;            
+            height: 60px;
+            margin: auto;
+            background-color: white;
+        }
+
+        .heading {
+            background-color: black;
+            color: white;
+            padding: 15px 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .post {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            background-color: white;
+        }
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
+        .post img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+        }
+
+        .post-content h3 {
+            font-size: 15px;
+            font-weight: normal;
+            margin: 0 0 7px;
+        }
+
+        .post-content p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        @media (max-width: 400px) {
+            .post {
+                gap: 15px;
+                padding: 18px 12px;
+            }
+
+            .post-content h3 {
+                font-size: 15px;
+            }
+
+            .post-content p {
+                font-size: 15px;
+            }
+        }
+
+       
+       .ad-card{
+    background:white;
+    padding:0 24px 24px;
+    margin-top:30px;
+}
+.ad-title{
+    background:black;
+    color:white;
+    padding:32px 24px;
+    font-size:25px;
+}
+.ad-box{
+    background:#f1f1f1;
+    height:300px;
+    margin-top:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+}
+
+
+.ad-box{
+    background:#f1f1f1;
+    height:200px;
+    display:flex;
+    margin-top: 10px
+    margin-bottom:10px;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+
+}
+
+
+ .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            margin: 0 2px 3px 0;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+
+
+        .tag1 {
+            background-color: #e0e5e8;
+            padding: 4px 10px;
+            margin: 0 2px 3px 0;
+            font-size: 9px;
+            line-height: 15px;
+        }
+
+
+        .icons {
+            padding: 20px 22px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .icons a {
+            color: black;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+
+        .send-btn {
+    width: 100%;
+    padding: 10px;
+    background: #b94327;
+    color: white;
+    border: none;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #111;
+}
+
+
+.footer {
+    background-color: #616161;
+    color: white;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.top-btn {
+    background-color: black;
+    color:white;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+}
+.top-btn:hover{
+	background: #111;
+}
+.footer p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: white;
+}
+
+.top-btn i {
+    color: white !important;
+}
+
+
+.comment-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.comment-content {
+    display: inline-block;
+}
+
+</style>
+
+</head>
+<body>
+	<nav>
+		<div class="blackdiv">
+		<img src="https://thumbs.dreamstime.com/b/facebook-logo-icon-voronezh-russia-january-black-square-soft-shadow-171161186.jpg" height="100px" class="img1">
+
+		<img src="https://img.magnific.com/premium-vector/instagram-vector-logo-icon-social-media-logotype-black-white_901408-393.jpg?semt=ais_hybrid&w=740&q=80" 
+		height="100px" class="img1">
+
+		<img src="https://www.pngitem.com/pimgs/m/242-2428951_snapchat-black-u0026-white-ic-snapchat-logo-png.png" height="100px" class="img1">
+
+		<img src="https://e7.pngegg.com/pngimages/826/496/png-clipart-two-dots-computer-icons-flickr-social-media-network-logo-black.png" height="100px" class="img1">
+
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa5y7q4paiQt3vr06xss_GxhjNtUSBwSMcxk_K9ma5KA&s=10"
+		height="100px" class="img1">
+
+		<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-square-icon.png" height="100px" class="img1">
+
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaJyl66SJtI5k-ZlGOwTyoVM_bqu-xXGM0s4Kjf6n-cw&s" height="100" class="imglast">
+	</div>
+	</nav>
+
+	<div class="box1">
+		<h1 class="c1 text-center">JANE BLOGLIFE</h1>
+		<h5 class="text-center">Welcome to the blog of 
+		 <span class="tag">Jane's world</span></h5>
+
+
+	</div>
+
+	<img src="https://www.w3schools.com/w3images/jane.jpg" height="800px" width="100%">
+      <div class="hero-text">
+            <h1>Jane's</h1>
+            <h2>FASHION BLOG</h2>
+
+            <button class="subscribe-btn"
+                    onclick="openSubscribe()">
+                SUBSCRIBE
+            </button>
+        </div>
+
+	<br>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-8 p-4">
+				<div class="card card1">
+					<div class="card-body">
+						<h4 class="text-center">TITLE HEADING</h4>
+						<h5 class="text-center">Title description,
+						<small class="text-secondary">May 2, 2016</small>
+					    </h5><br>
+						 
+						<img src="https://www.w3schools.com/w3images/girl_hat.jpg" class="w-100"><br><br>
+						<p>More Hats! I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.</p>
+
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                        <button class="like-btn" onclick="likePost(this)">
+                        <i class="fa fa-thumbs-up"></i> Like
+                        </button>
+
+                        <button class="reply-btn"
+                            onclick="toggleReplies('reply1')">
+                        Replies <span class="badge bg-light text-dark">1</span>
+                        </button>
+
+					</div><hr>
+
+					<div class="comment-box">
+						<img src="https://www.w3schools.com/w3images/avatar_smoke.jpg" alt="George" height="99px">
+						 <div class="comment-content p-4">
+                            <h3>George <small class="text-secondary">May 3, 2015, 6:32 PM</small></h3>
+                            <p>Great blog post! Following</p>
+                         </div>
+					</div>
+				</div><br>
+
+					<div class="card card1">
+					<div class="card-body">
+						<h4 class="text-center">TITLE HEADING</h4>
+						<h5 class="text-center">Title description,
+						<small class="text-secondary">April 23, 2016</small>
+					    </h5><br>
+						 
+						<img src="https://www.w3schools.com/w3images/man_hat.jpg" class="w-100"><br><br>
+						<p>Hats! The trend this summer is hats for men!</p>
+
+                        <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.</p>
+
+                        <button class="like-btn" onclick="likePost(this)">
+                        <i class="fa fa-thumbs-up"></i> Like
+                        </button>
+
+                        <button class="reply-btn"
+                            onclick="toggleReplies('reply2')">
+                        Replies <span class="badge bg-light text-dark">2</span>
+                        </button>
+
+					</div>
+				</div><br>
+
+					<div class="card card1">
+					<div class="card-body">
+						<h4 class="text-center">TITLE HEADING</h4>
+						<h5 class="text-center">Title description,
+						<small class="text-secondary">April 7, 2016</small>
+					    </h5><br>
+						 
+						<img src="https://www.w3schools.com/w3images/runway.jpg" class="w-100"><br><br>
+						<p>Don't miss! The runway in New York City this weekend is going to be legendary!</p>
+
+                        <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.</p>
+
+                        <button class="like-btn" onclick="likePost(this)">
+                        <i class="fa fa-thumbs-up"></i> Like
+                        </button>
+
+                        <button class="reply-btn"
+                            onclick="toggleReplies('reply3')">
+                        Replies <span class="badge bg-light text-dark">3</span>
+                        </button>
+
+					</div>
+				</div>
+			
+			</div>
+
+
+			<div class="col-4 p-4">
+				<div class="card card1">
+				<div class="card-body p-0">
+					<img src="https://www.w3schools.com/w3images/avatar_girl2.jpg" class="w-100">
+					<div class="black">
+						<h6 class="color ml-4">My Name</h6>
+						<p class="color ml-3">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest in lorem ipsum and mauris neque quam blog.</p>
+					</div>
+				</div>
+			</div><br><br>
+
+			<div class="popular-posts">
+            <div class="heading">
+               Popular Posts
+            </div>
+
+        <div class="post">
+            <img src="https://www.w3schools.com/w3images/avatar_smoke.jpg"
+                 alt="Denim">
+            <div class="post-content">
+                <h3>Denim</h3>
+                <p>Sed mattis nunc</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://www.w3schools.com/w3images/bandmember.jpg"
+                 alt="Sweaters">
+            <div class="post-content">
+                <h3>Sweaters</h3>
+                <p>Praes tinci sed</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://www.w3schools.com/w3images/workshop.jpg"
+                 alt="Workshop">
+            <div class="post-content">
+                <h3>Workshop</h3>
+                <p>Ultricies congue</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://www.w3schools.com/w3images/avatar_smoke.jpg"
+                 alt="Trends">
+            <div class="post-content">
+                <h3>Trends</h3>
+                <p>Lorem ipsum dipsum</p>
+            </div>
+        </div>
+
+    </div><br><br><br> <br><br><br> <br><br><br><br><br><br><br><br><br>
+
+     <div class="card">
+     	<div class="card-header rightcard">
+     		<h5>Advertise</h5>
+     	</div>
+
+     	<div class="card-body">
+     		<p class="text-center ad-box p-4">Your AD Here</p>
+     	</div>
+     </div><br><br>
+
+     <div class="card">
+     	<div class="card-header rightcard">
+     		<h5>Tags</h5>
+     	</div>
+
+     	<div class="card-body">
+     		   <span class="tag  ">Fashion</span>
+     		    <span class="tag1 ">New York</span>
+     		    <span class="tag1 ">London</span>
+     		    <span class="tag1 ">Hats</span>
+     		    <span class="tag1 ">Norway</span>
+     		    <span class="tag1 ">Sweaters</span>
+     		    <span class="tag1 ">Ideas</span>
+     		    <span class="tag1">Deals</span>
+     		    <span class="tag1 ">Accsessaries</span> 
+     		    <span class="tag1">News</span>
+     		    <span class="tag1 ">Clothing</span>
+     		    <span class="tag1 ">Shopping</span>
+     		    <span class="tag1 ">Jeans</span>
+     		    <span class="tag1 ">Trends</span>
+
+
+
+     	</div>
+     </div><br><br>
+
+
+     <div class="card">
+     	<div class="card-header rightcard">
+     		<h5>Inspiration</h5>
+     	</div>
+
+     	<div class="card-body">
+     		<div class="row">
+     		<div class="col-6">
+     			<img src="https://www.w3schools.com/w3images/jeans.jpg" class="w-100">
+     		</div>
+
+     		<div class="col-6">
+     			<img src="https://www.w3schools.com/w3images/avatar_hat.jpg" class="w-100">
+     		</div>
+     	</div><br>
+
+
+     	<div class="row">
+     		<div class="col-6">
+     			<img src="https://www.w3schools.com/w3images/team1.jpg" class="w-100">
+     		</div>
+
+     		<div class="col-6">
+     			<img src="https://www.w3schools.com/w3images/team4.jpg" class="w-100">
+     		</div>
+     	</div>
+
+
+
+     	</div>
+     </div><br><br>
+			
+			<div class="card">
+     	<div class="card-header rightcard">
+     		<h5>Follow Me</h5>
+     	</div>
+
+     	<div class="icons">
+     		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+     	</div><br><br>
+
+     	 <div class="card">
+     	<div class="card-header rightcard">
+     		<h5>Subscribe</h5>
+     	</div>
+
+     	<div class="card-body p-2">
+     		<p>Enter your e-mail below and get notified about the latest blog posts.</p>
+
+     		<input type="text" placeholder ="Enter e-mail" class="form-control"><br>
+
+     		 <button class="send-btn" type="submit">
+                Subscribe
+            </button>
+
+
+
+
+		</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+
+    <a href="#" class="top-btn">
+            <i class="fa-solid fa-arrow-up"></i>
+            &nbsp; To the top
+        </a>
+
+    <p>
+        Powered by
+        <a href="https://www.w3schools.com/w3css/">w3.css</a>
+    </p>
+
+</body>
+</html>
